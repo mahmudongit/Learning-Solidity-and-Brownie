@@ -1,0 +1,15 @@
+{
+  "contracts": {
+    "Tutorial": "70ec1a0a939cf79412b29126f2724524435bc2c4"
+  },
+  "tests": {
+    "tests/test_tutorial.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "F",
+      "sha1": "3d769ea1a37c490b784aa8111536a2f754473093",
+      "txhash": []
+    }
+  },
+  "tx": {}
+}

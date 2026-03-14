@@ -1,0 +1,31 @@
+default: development
+networks:
+  development:
+    gas_price: 0
+    cmd: ganache-cli
+    cmd_settings:
+      port: 8545
+      accounts: 10
+      mnemonic: brownie
+      chain-id: 31337
+
+  # Add this entire block
+  test:
+    gas_price: 0
+    cmd: ganache-cli
+    cmd_settings:
+      port: 8545
+      accounts: 10
+      mnemonic: brownie
+      chain-id: 31337
+
+dotenv: .env
+wallets: 
+ from_key: ${PRIVATE_KEY}
+
+    
+
+pytest:
+  path: "tests/"
+
+  

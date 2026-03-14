@@ -1,0 +1,8 @@
+networks:
+  development:
+    cmd: anvil
+    cmd_settings:
+      port: 8545
+      accounts: 10
+      mnemonic: brownie
+      chain_id: 31337
