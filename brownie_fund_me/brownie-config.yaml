@@ -1,6 +1,35 @@
-
-  
 dotenv: .env
 
+compiler:
+  solc:
+    version: 0.8.20
+    remappings:
+      - "@chainlink/=node_modules/@chainlink/"
+
+networks:
+  default: development
+  
+  sepolia:
+    eth_usd_price_feed: "0x66aB6D9362d4F35596279692F0251Db635165871"
+    verify: True
+
+  mainnet-fork-dev:
+    host: http://127.0.0.1:8545
+    timeout: 120
+    eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    verify: False
+
+  development:
+    cmd: C:\Users\mahmu\.foundry\bin\anvil.exe
+    host: http://127.0.0.1
+    cmd_settings:
+      accounts: 10
+      mnemonic: brownie
+      gas_price: 0
+    verify: False
+
 wallets:
-   from_key: ${PRIVATE_KEY}
+  from_key: ${PRIVATE_KEY}
+
+etherscan:
+  token: ${ETHERSCAN_TOKEN}
